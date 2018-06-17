@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,
+				   user-scalable=no">
+    <title>What's My Function?</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway"
+	  rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/seedrandom/2.4.0/seedrandom.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+  </head>
+  <body>
+    <div id="msgdiv" class="hide"><span id="message"></span></div>
+    <form id="function"></form>
+    <div id="background">
+	<div id="leftpane" class="pane">
+	<div id="scorediv" class="box">
+	  <span class="info">Score:</span> <span id="score">0</span>
+	</div>
+	<div id="triesdiv" class="box">
+	  <span class="info">Attempts:</span> <span id="tries">0</span>
+	</div>
+	<div id="leveldiv" class="box">
+	  <span class="info">Level:</span>
+	  <select id="level" form="function">
+	    <option value="0">Linear</option>
+	    <option value="1">Quadratic</option>
+	    <option value="2">Cubic</option>
+	    <option value="3">Linear Reciprocal</option>
+	    <option value="4">Quadratic Reciprocal</option>
+	  </select>
+	</div>
+	</div>
+	<div id="rightpane" class="pane">
+	<div id="pointsdiv" class="box">
+	  <span class="info">Points:</span> <span id="points">100</span>
+	</div>
+	</div>
+	<h1 id="title">What's My Function?</h1>
+      <div id="content">
+	<button type="button" form="function" id="instbtn" class="btn">Show instructions</button>
+	<div id="instructions" class="hide">
+	<p>
+	  Your goal is to guess the hidden function.  You can either
+	  put in values to see what comes out, or put in a value and
+	  predict what will come out.
+	</p>
+	<p>
+	  To demonstrate that you have guessed the function, you need
+	  to make five correct predictions.
+	</p>
+	<p>
+	  You start with 100 points and you use these points as follows:
+	</p>
+	<ul>
+	  <li>5 points: to put in a value and see what comes out.
+	  <li>10 points: for an incorrect prediction.
+	  <li>5 points: if you put in a value or make a prediction
+	    using a value that is not in the domain of the function.
+	</ul>
+	<p>
+	  Any points left over will be added to your score at the end.
+	</p>
+	</div>
+	<div id="guessdiv">
+	  <input type="text" form="function" id="guess">
+	  <span class="huge">⟼</span>
+	  <input type="text" form="function" id="predict">
+	  <br>
+	  <button type="button" form="function" id="submit" class="btn">Submit
+	  your <span id="inpt">Input</span><span id="pred" class="hide">Prediction</span></button>
+	</div>
+	<div id="guesslist">
+	  <table id="guesstbl">
+	    <thead>
+	      <tr>
+		<th>Input</th>
+		<th>⟼</th>
+		<th>Output</th>
+	      </tr>
+	    </thead>
+	    <tbody id="guesses">
+	    </tbody>
+	  </table>
+	</div>
+      </div>
+    </div>
+  </body>
+</html>
